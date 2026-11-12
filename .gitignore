@@ -1,0 +1,8 @@
+# Documents sources non publiés (brief client, capture brute)
+*.pdf
+Capture*.png
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
