@@ -56,3 +56,21 @@ reveals.forEach((el) => {
   if (el.closest('.hero')) requestAnimationFrame(() => show(el));
   else io.observe(el);
 });
+
+// Bande défilante des domaines : boucle infinie sans à-coup
+document.querySelectorAll('.marquee__track').forEach((track) => {
+  if (reduceMotion) return;
+  const original = [...track.children];
+  // 1) on répète la série jusqu'à dépasser la largeur de l'écran
+  while (track.scrollWidth < window.innerWidth * 1.2) {
+    original.forEach((li) => track.appendChild(li.cloneNode(true)));
+  }
+  // 2) on double l'ensemble : l'animation glisse d'exactement une moitié
+  [...track.children].forEach((li) => {
+    const clone = li.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+  // vitesse constante (~40 px/s), quelle que soit la largeur
+  track.style.setProperty('--dur', `${Math.round(track.scrollWidth / 2 / 40)}s`);
+});
