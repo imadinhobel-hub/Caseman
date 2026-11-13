@@ -95,7 +95,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- Accueil ---------- */
 .hero { position: relative; overflow: hidden; isolation: isolate; padding: 170px 0 90px; text-align: center; background: linear-gradient(180deg, var(--violet-50) 0%, #fff 100%); }
-.hero__motif { position: absolute; z-index: -1; width: 420px; height: 420px; color: var(--violet); opacity: .05; }
+.hero__motif { position: absolute; z-index: -1; width: 420px; height: 420px; opacity: .16; }
 .hero__motif--l { left: -140px; top: 120px; }
 .hero__motif--r { right: -120px; top: -60px; transform: scaleX(-1); }
 .hero__inner { max-width: 920px; }
