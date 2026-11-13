@@ -95,9 +95,11 @@ strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- Accueil ---------- */
 .hero { position: relative; overflow: hidden; isolation: isolate; padding: 170px 0 90px; text-align: center; background: linear-gradient(180deg, var(--violet-50) 0%, #fff 100%); }
-.hero__motif { position: absolute; z-index: -1; width: 420px; height: 420px; opacity: .42; }
-.hero__motif--l { left: -140px; top: 120px; }
-.hero__motif--r { right: -150px; top: -30px; }
+/* Facettes du logo en arrière-plan (forme, couleur et sens d'origine) */
+.hero__shape { position: absolute; z-index: -1; opacity: .42; height: auto; }
+.hero__shape--violet { width: 270px; left: 40px; top: 110px; }
+.hero__shape--rose { width: 112px; left: 110px; top: 330px; }
+.hero__shape--jaune { width: 330px; right: 12px; top: 440px; }
 .hero__inner { max-width: 920px; }
 .hero .eyebrow { justify-content: center; }
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.08; }
@@ -262,6 +264,9 @@ strong { color: var(--ink); font-weight: 600; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .story { grid-template-columns: 1fr; gap: 60px; }
+  .hero__shape--violet { width: 220px; left: -20px; }
+  .hero__shape--rose { width: 84px; left: 30px; }
+  .hero__shape--jaune { width: 300px; right: -40px; top: 470px; }
   .values { grid-template-columns: 1fr; max-width: 600px; margin-inline: auto; }
   .value + .value { border-left: 0; border-top: 1px solid var(--line); }
   .story__media { position: relative; top: 0; max-width: 320px; width: 100%; margin-inline: auto; }
@@ -287,7 +292,7 @@ strong { color: var(--ink); font-weight: 600; }
 }
 @media (max-width: 600px) {
   .hero { padding: 130px 0 70px; }
-  .hero__motif { display: none; }
+  .hero__shape { display: none; }
   .hero .eyebrow { font-size: .62rem; letter-spacing: .08em; gap: 8px; }
   .stats { grid-template-columns: 1fr; gap: 28px; margin-top: 54px; }
   .stat + .stat { border-left: 0; border-top: 1px solid var(--line); padding-top: 28px; }
