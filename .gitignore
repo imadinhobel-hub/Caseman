@@ -1,4 +1,4 @@
-# Documents sources non publiés (brief client, capture brute)
+# Documents sources non publiés (brief, script client, photos originales)
 *.pdf
 Capture*.png
 
@@ -6,3 +6,5 @@ Capture*.png
 .DS_Store
 Thumbs.db
 desktop.ini
+*.docx
+_DSC*.jpg
