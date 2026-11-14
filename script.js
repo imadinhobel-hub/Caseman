@@ -152,3 +152,45 @@ if (xp) {
     }, 2200);
   }
 }
+
+// Nos valeurs : la photo et la légende suivent la valeur active
+const vals = document.getElementById('vals');
+if (vals) {
+  const items = [...vals.querySelectorAll('.val')];
+  const imgs = [...vals.querySelectorAll('.vals__img')];
+  const caps = [...vals.querySelectorAll('.vals__cap')];
+  let cur = 0;
+  let prevTimer;
+
+  const select = (i) => {
+    if (i === cur) return;
+    imgs.forEach((img) => img.classList.remove('is-prev'));
+    imgs[cur].classList.replace('is-active', 'is-prev');
+    imgs[i].classList.add('is-active');
+    const old = imgs[cur];
+    clearTimeout(prevTimer);
+    prevTimer = setTimeout(() => old.classList.remove('is-prev'), 1200);
+    items.forEach((it, k) => {
+      it.classList.toggle('is-active', k === i);
+      it.querySelector('.val__btn').setAttribute('aria-expanded', String(k === i));
+    });
+    caps.forEach((c, k) => c.classList.toggle('is-active', k === i));
+    vals.dataset.v = String(i + 1);
+    cur = i;
+  };
+
+  items.forEach((it, i) => {
+    it.querySelector('.val__btn').addEventListener('click', () => select(i));
+    // fin de la barre de progression : valeur suivante
+    it.querySelector('.val__bar').addEventListener('animationend', () => select((i + 1) % items.length));
+  });
+
+  // défilement automatique seulement quand la section est visible et non survolée
+  let inView = false;
+  let hover = false;
+  const sync = () => vals.classList.toggle('is-paused', !inView || hover);
+  vals.addEventListener('mouseenter', () => { hover = true; sync(); });
+  vals.addEventListener('mouseleave', () => { hover = false; sync(); });
+  new IntersectionObserver((entries) => { inView = entries[0].isIntersecting; sync(); }, { threshold: 0.35 }).observe(vals);
+  sync();
+}

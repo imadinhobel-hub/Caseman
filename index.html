@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
 
@@ -284,36 +284,55 @@
 
     <!-- NOS VALEURS -->
     <section class="section section--alt" id="valeurs">
-      <div class="container">
-        <div class="section__head section__head--center reveal">
-          <p class="eyebrow">Notre engagement</p>
-          <h2>Nos valeurs</h2>
+      <div class="container vals" id="vals" data-v="1">
+        <div class="vals__media reveal">
+          <div class="vals__frame">
+            <img class="vals__img is-active" src="assets/valeurs-fiabilite.webp" alt="Main qui rédige un document au stylo sur un bureau" width="1400" height="933" loading="lazy" style="object-position: 40% 50%" />
+            <img class="vals__img" src="assets/valeurs-qualite.webp" alt="Formateur qui s'adresse à des étudiants en salle de cours" width="1400" height="788" loading="lazy" style="object-position: 18% 50%" />
+            <img class="vals__img" src="assets/valeurs-confiance.webp" alt="Étudiants attentifs pendant un cours" width="1400" height="1145" loading="lazy" style="object-position: 50% 40%" />
+            <span class="vals__shade" aria-hidden="true"></span>
+            <div class="vals__caps" aria-hidden="true">
+              <p class="vals__cap is-active"><span>01</span>Fiabilité</p>
+              <p class="vals__cap"><span>02</span>Qualité</p>
+              <p class="vals__cap"><span>03</span>Confiance</p>
+            </div>
+          </div>
         </div>
-        <div class="values reveal">
-          <article class="value value--violet">
-            <div class="value__head">
-              <span class="value__icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-              <span class="value__n">01</span>
-            </div>
-            <h3>Fiabilité</h3>
-            <p>Des sujets conformes aux attendus des référentiels, livrés dans les délais convenus.</p>
-          </article>
-          <article class="value value--rose">
-            <div class="value__head">
-              <span class="value__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
-              <span class="value__n">02</span>
-            </div>
-            <h3>Qualité</h3>
-            <p>Une exigence pédagogique issue de l'enseignement et de la pratique quotidienne de la formation.</p>
-          </article>
-          <article class="value value--jaune">
-            <div class="value__head">
-              <span class="value__icon"><svg viewBox="0 0 24 24"><path d="M11 17l2 2a1 1 0 1 0 3-3"/><path d="M14 14l2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="M21 3l1 11h-2"/><path d="M3 3L2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
-              <span class="value__n">03</span>
-            </div>
-            <h3>Confiance</h3>
-            <p>Une relation durable, fondée sur la transparence et la confidentialité de vos épreuves.</p>
-          </article>
+
+        <div class="vals__copy">
+          <p class="eyebrow reveal">Notre engagement</p>
+          <h2 class="reveal">Nos valeurs</h2>
+          <p class="vals__lead reveal">Trois principes guident chacune de nos missions, de la première lecture du référentiel à la livraison de vos épreuves.</p>
+
+          <ol class="vals__list reveal">
+            <li class="val val--violet is-active">
+              <button class="val__btn" type="button" aria-expanded="true">
+                <span class="val__n">01</span>
+                <h3>Fiabilité</h3>
+                <span class="val__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="val__body"><div><p>Des sujets conformes aux attendus des référentiels, livrés dans les délais convenus.</p></div></div>
+              <span class="val__bar" aria-hidden="true"></span>
+            </li>
+            <li class="val val--rose">
+              <button class="val__btn" type="button" aria-expanded="false">
+                <span class="val__n">02</span>
+                <h3>Qualité</h3>
+                <span class="val__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="val__body"><div><p>Une exigence pédagogique issue de l'enseignement et de la pratique quotidienne de la formation.</p></div></div>
+              <span class="val__bar" aria-hidden="true"></span>
+            </li>
+            <li class="val val--jaune">
+              <button class="val__btn" type="button" aria-expanded="false">
+                <span class="val__n">03</span>
+                <h3>Confiance</h3>
+                <span class="val__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="val__body"><div><p>Une relation durable, fondée sur la transparence et la confidentialité de vos épreuves.</p></div></div>
+              <span class="val__bar" aria-hidden="true"></span>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
@@ -373,6 +392,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20"></script>
+  <script src="script.js?v=21"></script>
 </body>
 </html>

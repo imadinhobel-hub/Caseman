@@ -8,3 +8,6 @@ Thumbs.db
 desktop.ini
 *.docx
 _DSC*.jpg
+
+# Réglages locaux Claude Code
+.claude/settings.local.json
