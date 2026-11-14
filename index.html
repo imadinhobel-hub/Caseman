@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
 </head>
 <body>
 
@@ -123,7 +123,7 @@
     </section>
 
     <!-- NOS EXPERTISES -->
-    <section class="section" id="expertises">
+    <section class="section xp-section" id="expertises">
       <div class="container">
         <div class="section__head section__head--center reveal">
           <p class="eyebrow">Ce que nous faisons</p>
@@ -131,13 +131,15 @@
           <p class="section__lead">CASEMAN accompagne les certificateurs et les organismes de formation dans la conception de leurs évaluations, en tenant compte des référentiels de compétences et des besoins de chaque structure.</p>
         </div>
 
-        <div class="services-frame">
-          <div class="services">
-            <article class="service service--violet reveal">
-              <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></span>
+        <div class="xp" id="xp">
+          <div class="xp__steps" id="xp-steps">
+            <div class="xp__rail" aria-hidden="true"><span></span></div>
+
+            <article class="xp-step xp-step--violet" data-step="1">
+              <span class="xp-step__n" aria-hidden="true">01</span>
               <h3>Sujets d'évaluation</h3>
               <p>Nous réalisons des sujets pour différentes sessions d'évaluation :</p>
-              <ul class="checklist">
+              <ul class="xp-tags">
                 <li>Épreuves certificatives</li>
                 <li>Épreuves de synthèse</li>
                 <li>Sujets d'entraînement</li>
@@ -145,17 +147,106 @@
                 <li>Dossiers collectifs</li>
                 <li>Études de cas individuelles</li>
               </ul>
+              <figure class="xp-step__media"><img src="assets/expertise-sujet-1.webp" alt="Extrait d'un sujet d'étude de cas : benchmark concurrentiel et résultats d'enquête" width="682" height="988" loading="lazy" /></figure>
             </article>
-            <article class="service service--rose reveal">
-              <span class="service__icon"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span>
+
+            <article class="xp-step xp-step--rose" data-step="2">
+              <span class="xp-step__n" aria-hidden="true">02</span>
               <h3>Corrigés</h3>
               <p>Nous réalisons des corrigés clairs et détaillés, avec les réponses attendues et les explications nécessaires pour faciliter le travail des correcteurs.</p>
+              <figure class="xp-step__media"><img src="assets/expertise-corrige.webp" alt="Extrait d'un corrigé : attendus des réponses et atteinte des critères" width="664" height="1082" loading="lazy" /></figure>
             </article>
-            <article class="service service--jaune reveal">
-              <span class="service__icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 10h16M4 15h16M10 4v16"/></svg></span>
+
+            <article class="xp-step xp-step--jaune" data-step="3">
+              <span class="xp-step__n" aria-hidden="true">03</span>
               <h3>Grilles d'évaluation</h3>
               <p>Nous concevons des grilles adaptées aux référentiels de compétences, avec des critères et des indicateurs précis pour faciliter l'évaluation des candidats.</p>
+              <figure class="xp-step__media xp-step__media--wide"><img src="assets/expertise-grille.webp" alt="Extrait d'une grille d'évaluation : modalités, critères, attendus et atteinte des critères" width="1600" height="616" loading="lazy" /></figure>
             </article>
+          </div>
+
+          <!-- Scène animée qui suit la catégorie active -->
+          <div class="xp__stage" id="xp-stage" aria-hidden="true">
+            <span class="xp__glow xp__glow--1"></span>
+            <span class="xp__glow xp__glow--2"></span>
+            <span class="xp__glow xp__glow--3"></span>
+            <span class="xp__dots"></span>
+
+            <div class="xp__tilt">
+              <!-- 01 · Sujets : les pages se déploient -->
+              <div class="scene scene--sujets" data-scene="1">
+                <div class="doc d-s3"><div class="doc__paper"><img src="assets/expertise-sujet-3.webp" alt="" width="944" height="532" /></div></div>
+                <div class="doc d-s1"><div class="doc__paper"><img src="assets/expertise-sujet-1.webp" alt="" width="682" height="988" /></div></div>
+                <div class="doc d-s2"><div class="doc__paper"><img src="assets/expertise-sujet-2.webp" alt="" width="682" height="988" /></div></div>
+                <div class="chip chip--stat"><strong>+300</strong><span>sujets conçus</span></div>
+                <div class="chip chip--ticker">
+                  <span class="chip__icon chip__icon--violet"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></span>
+                  <div><small>Format</small><b class="ticker" id="xp-ticker">Épreuves certificatives</b></div>
+                </div>
+              </div>
+
+              <!-- 02 · Corrigés : surlignage, annotations, loupe -->
+              <div class="scene scene--corrige" data-scene="2">
+                <div class="doc d-cb"><div class="doc__paper"><img src="assets/expertise-sujet-2.webp" alt="" width="682" height="988" loading="lazy" /></div></div>
+                <div class="doc d-co">
+                  <div class="doc__paper">
+                    <img src="assets/expertise-corrige.webp" alt="" width="664" height="1082" loading="lazy" />
+                    <svg class="ink" viewBox="0 0 664 1082">
+                      <g class="ink__hl">
+                        <rect x="4" y="259" width="346" height="22" rx="4"/>
+                        <rect x="4" y="311" width="404" height="22" rx="4"/>
+                        <rect x="4" y="389" width="382" height="22" rx="4"/>
+                        <rect x="4" y="823" width="346" height="22" rx="4"/>
+                        <rect x="4" y="929" width="160" height="22" rx="4"/>
+                        <rect x="4" y="955" width="236" height="22" rx="4"/>
+                        <rect x="4" y="981" width="282" height="22" rx="4"/>
+                      </g>
+                      <g class="ink__pen">
+                        <path pathLength="1" d="M490 380 C482 352 600 344 606 370 C612 398 500 404 486 382 C478 368 506 352 530 351"/>
+                        <path pathLength="1" d="M490 646 C482 618 600 610 606 636 C612 664 500 670 486 648 C478 634 506 618 530 617"/>
+                        <path pathLength="1" d="M462 962 q 20 -8 40 0 t 40 0 t 40 0 t 40 0"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="lens"></span>
+                </div>
+                <div class="chip chip--note">
+                  <span class="chip__icon chip__icon--rose"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span>
+                  <div><small>Corrigé</small><b>Réponses attendues</b></div>
+                </div>
+                <div class="chip chip--note2">
+                  <span class="chip__icon chip__icon--violet"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
+                  <div><small>Pour les correcteurs</small><b>Explications détaillées</b></div>
+                </div>
+              </div>
+
+              <!-- 03 · Grilles : feuille en perspective, balayage, critères validés -->
+              <div class="scene scene--grille" data-scene="3">
+                <div class="doc d-gb"><div class="doc__paper"><img src="assets/expertise-corrige.webp" alt="" width="664" height="1082" loading="lazy" /></div></div>
+                <div class="doc d-gr">
+                  <div class="doc__paper">
+                    <img src="assets/expertise-grille.webp" alt="" width="1600" height="616" loading="lazy" />
+                    <svg class="grid-ink" viewBox="0 0 2812 1082" preserveAspectRatio="none">
+                      <rect class="row row--1" x="6" y="252" width="2800" height="246"/>
+                      <rect class="row row--2" x="6" y="500" width="2800" height="280"/>
+                      <rect class="row row--3" x="6" y="784" width="2800" height="292"/>
+                    </svg>
+                    <span class="scan"></span>
+                  </div>
+                </div>
+                <div class="badge badge--1"><i></i>Critère 1 · Acquis</div>
+                <div class="badge badge--2"><i></i>Critère 2 · Acquis</div>
+                <div class="badge badge--3 badge--wip"><i></i>Critère 3 · En cours</div>
+                <div class="chip chip--score">
+                  <svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18"/><circle class="ring__val" cx="22" cy="22" r="18" pathLength="1"/></svg>
+                  <div><small>Critères &amp; indicateurs</small><b>Évaluation objective</b></div>
+                </div>
+                <div class="chip chip--ref">
+                  <span class="chip__icon chip__icon--jaune"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 10h16M4 15h16M10 4v16"/></svg></span>
+                  <div><small>Aligné sur</small><b>Le référentiel de compétences</b></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -282,6 +373,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=19"></script>
+  <script src="script.js?v=20"></script>
 </body>
 </html>
