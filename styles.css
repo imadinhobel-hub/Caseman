@@ -146,37 +146,36 @@ strong { color: var(--ink); font-weight: 600; }
 /* Nos expertises */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
 .service {
-  --c1: #8A3399; --c2: #4A1754; --glow: rgba(98,32,110,.40); --on: #fff; --on-soft: rgba(255,255,255,.86);
-  position: relative; overflow: hidden; isolation: isolate; padding: 40px 32px 36px; border-radius: var(--radius); border: 0;
-  background: linear-gradient(145deg, var(--c1), var(--c2)); color: var(--on-soft);
-  box-shadow: 0 22px 44px -26px var(--glow);
-  transition: box-shadow .3s, transform .3s var(--ease);
+  --c1: #8A3399; --c2: #4A1754; --c: #62206E; --bg1: rgba(138,51,153,.09); --bg2: rgba(74,23,84,.17); --bd: rgba(98,32,110,.22); --glow: rgba(98,32,110,.30); --on: #fff;
+  position: relative; overflow: hidden; isolation: isolate; padding: 40px 32px 36px; border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--bg1), var(--bg2)); border: 1px solid var(--bd);
+  box-shadow: 0 18px 40px -30px var(--glow);
+  transition: box-shadow .3s, transform .3s var(--ease), border-color .3s;
 }
 /* facette du cube en filigrane */
 .service::before {
   content: ""; position: absolute; z-index: -1; right: -40px; top: -30px; width: 200px; height: 116px;
-  background: currentColor; opacity: .10; clip-path: polygon(0 50%, 60% 0, 100% 25%, 40% 75%);
+  background: var(--c); opacity: .07; clip-path: polygon(0 50%, 60% 0, 100% 25%, 40% 75%);
   transition: transform .5s var(--ease), opacity .4s;
 }
-.service:hover { box-shadow: 0 30px 56px -24px var(--glow); transform: translateY(-4px); }
-.service:hover::before { transform: translate(-10px, 8px); opacity: .16; }
-.service--violet { --c1: #8A3399; --c2: #4A1754; --glow: rgba(98,32,110,.45); }
-.service--rose { --c1: #CC3566; --c2: #8A1640; --glow: rgba(158,27,74,.42); }
-.service--jaune { --c1: #F9CF45; --c2: #E59A06; --glow: rgba(240,180,20,.55); --on: #261C2C; --on-soft: rgba(38,28,44,.82); }
-.service h3, .service strong { color: var(--on); }
-.service p { color: var(--on-soft); }
+.service:hover { box-shadow: 0 28px 52px -26px var(--glow); transform: translateY(-4px); border-color: var(--c); }
+.service:hover::before { transform: translate(-10px, 8px); opacity: .12; }
+.service--violet { --c1: #8A3399; --c2: #4A1754; --c: #62206E; --bg1: rgba(138,51,153,.08); --bg2: rgba(74,23,84,.16); --bd: rgba(98,32,110,.22); --glow: rgba(98,32,110,.32); }
+.service--rose { --c1: #CC3566; --c2: #8A1640; --c: #9E1B4A; --bg1: rgba(204,53,102,.08); --bg2: rgba(138,22,64,.15); --bd: rgba(158,27,74,.22); --glow: rgba(158,27,74,.30); }
+.service--jaune { --c1: #F9CF45; --c2: #E59A06; --c: #B07D00; --bg1: rgba(249,207,69,.16); --bg2: rgba(229,154,6,.22); --bd: rgba(229,154,6,.32); --glow: rgba(240,180,20,.40); --on: #261C2C; }
+.service h3 { color: var(--c); }
+.service p { color: var(--text); }
 .service__icon {
   width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 22px;
-  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28);
+  background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: 0 10px 20px -10px var(--glow);
   transition: transform .3s var(--ease);
 }
-.service--jaune .service__icon { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.55); }
 .service__icon svg, .domain__icon svg, .contact__icon svg { width: 26px; height: 26px; fill: none; stroke: var(--violet); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: stroke .3s; }
 .service__icon svg { stroke: var(--on); }
 .service:hover .service__icon { transform: translateY(-3px); }
-.service .checklist li { color: var(--on); }
-.service .checklist li::before { background: rgba(255,255,255,.2); }
-.service .checklist li::after { border-color: var(--on); }
+.service .checklist li { color: var(--ink); }
+.service .checklist li::before { background: rgba(255,255,255,.75); }
+.service .checklist li::after { border-color: var(--c); }
 .service h3 { font-size: 1.3rem; margin-bottom: 12px; }
 .service p { font-size: .97rem; }
 .checklist { margin-top: 16px; display: grid; gap: 9px; }
