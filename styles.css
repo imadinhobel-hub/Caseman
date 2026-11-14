@@ -146,25 +146,37 @@ strong { color: var(--ink); font-weight: 600; }
 /* Nos expertises */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
 .service {
-  --c1: #8A3399; --c2: #4A1754; --c: #62206E; --soft: #F3E8F5; --glow: rgba(98,32,110,.28); --on: #fff;
-  position: relative; overflow: hidden; padding: 40px 32px 36px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  transition: border-color .3s, box-shadow .3s, transform .3s var(--ease);
+  --c1: #8A3399; --c2: #4A1754; --glow: rgba(98,32,110,.40); --on: #fff; --on-soft: rgba(255,255,255,.86);
+  position: relative; overflow: hidden; isolation: isolate; padding: 40px 32px 36px; border-radius: var(--radius); border: 0;
+  background: linear-gradient(145deg, var(--c1), var(--c2)); color: var(--on-soft);
+  box-shadow: 0 22px 44px -26px var(--glow);
+  transition: box-shadow .3s, transform .3s var(--ease);
 }
-.service::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--c1), var(--c2)); }
-.service::after { content: ""; position: absolute; left: 32px; right: 32px; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--c1), var(--c2)); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); border-radius: 3px; }
-.service:hover { border-color: var(--soft); box-shadow: 0 24px 44px -26px var(--glow); transform: translateY(-4px); }
-.service:hover::after { transform: scaleX(1); }
-.service--violet { --c1: #8A3399; --c2: #4A1754; --c: #62206E; --soft: #EAD8EE; --glow: rgba(98,32,110,.30); }
-.service--rose { --c1: #CC3566; --c2: #8A1640; --c: #9E1B4A; --soft: #F4D6E1; --glow: rgba(158,27,74,.28); }
-.service--jaune { --c1: #F9CF45; --c2: #E59A06; --c: #B07D00; --soft: #F8E7B5; --glow: rgba(240,180,20,.40); --on: #261C2C; }
+/* facette du cube en filigrane */
+.service::before {
+  content: ""; position: absolute; z-index: -1; right: -40px; top: -30px; width: 200px; height: 116px;
+  background: currentColor; opacity: .10; clip-path: polygon(0 50%, 60% 0, 100% 25%, 40% 75%);
+  transition: transform .5s var(--ease), opacity .4s;
+}
+.service:hover { box-shadow: 0 30px 56px -24px var(--glow); transform: translateY(-4px); }
+.service:hover::before { transform: translate(-10px, 8px); opacity: .16; }
+.service--violet { --c1: #8A3399; --c2: #4A1754; --glow: rgba(98,32,110,.45); }
+.service--rose { --c1: #CC3566; --c2: #8A1640; --glow: rgba(158,27,74,.42); }
+.service--jaune { --c1: #F9CF45; --c2: #E59A06; --glow: rgba(240,180,20,.55); --on: #261C2C; --on-soft: rgba(38,28,44,.82); }
+.service h3, .service strong { color: var(--on); }
+.service p { color: var(--on-soft); }
 .service__icon {
   width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 22px;
-  background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: 0 10px 20px -10px var(--glow);
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28);
   transition: transform .3s var(--ease);
 }
+.service--jaune .service__icon { background: rgba(255,255,255,.35); border-color: rgba(255,255,255,.55); }
 .service__icon svg, .domain__icon svg, .contact__icon svg { width: 26px; height: 26px; fill: none; stroke: var(--violet); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: stroke .3s; }
 .service__icon svg { stroke: var(--on); }
 .service:hover .service__icon { transform: translateY(-3px); }
+.service .checklist li { color: var(--on); }
+.service .checklist li::before { background: rgba(255,255,255,.2); }
+.service .checklist li::after { border-color: var(--on); }
 .service h3 { font-size: 1.3rem; margin-bottom: 12px; }
 .service p { font-size: .97rem; }
 .checklist { margin-top: 16px; display: grid; gap: 9px; }
