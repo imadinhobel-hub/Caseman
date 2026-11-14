@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="233 250 472 472" role="img" aria-label="Caseman">
-  <polygon fill="#62206E" points="299,364 494,251.5 641,335.5 446,448"/>
-  <path fill="#9E1B4A" d="M302,384 L430,458 L430,693 L302,619 Q283,608 283,586 L283,395 Q283,373 302,384 Z"/>
-  <polygon fill="#F0B414" points="430,668 564,590.5 655,642.5 521,720"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="233 244 488 488">
+  <polygon fill="#F0B414" points="378,663 557.3,559.5 671.6,625.5 492.3,729"/>
+  <path fill="#9E1B4A" d="M283,373 L404,443 Q430,458 430,488 L430,693 L283,608 Z"/>
+  <polygon fill="#62206E" points="299,364 502.5,246.5 649.5,330.5 446,448"/>
 </svg>
