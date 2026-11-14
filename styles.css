@@ -146,16 +146,25 @@ strong { color: var(--ink); font-weight: 600; }
 /* Nos expertises */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
 .service {
-  position: relative; padding: 36px 32px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  --c1: #8A3399; --c2: #4A1754; --c: #62206E; --soft: #F3E8F5; --glow: rgba(98,32,110,.28); --on: #fff;
+  position: relative; overflow: hidden; padding: 40px 32px 36px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   transition: border-color .3s, box-shadow .3s, transform .3s var(--ease);
 }
-.service::after { content: ""; position: absolute; left: 32px; right: 32px; bottom: -1px; height: 3px; background: var(--gold-grad); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); border-radius: 3px; }
-.service:hover { border-color: var(--violet-100); box-shadow: var(--shadow); transform: translateY(-4px); }
+.service::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--c1), var(--c2)); }
+.service::after { content: ""; position: absolute; left: 32px; right: 32px; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--c1), var(--c2)); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); border-radius: 3px; }
+.service:hover { border-color: var(--soft); box-shadow: 0 24px 44px -26px var(--glow); transform: translateY(-4px); }
 .service:hover::after { transform: scaleX(1); }
-.service__icon { width: 54px; height: 54px; border-radius: 12px; background: var(--violet-50); display: grid; place-items: center; margin-bottom: 22px; transition: background .3s; }
+.service--violet { --c1: #8A3399; --c2: #4A1754; --c: #62206E; --soft: #EAD8EE; --glow: rgba(98,32,110,.30); }
+.service--rose { --c1: #CC3566; --c2: #8A1640; --c: #9E1B4A; --soft: #F4D6E1; --glow: rgba(158,27,74,.28); }
+.service--jaune { --c1: #F9CF45; --c2: #E59A06; --c: #B07D00; --soft: #F8E7B5; --glow: rgba(240,180,20,.40); --on: #261C2C; }
+.service__icon {
+  width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 22px;
+  background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: 0 10px 20px -10px var(--glow);
+  transition: transform .3s var(--ease);
+}
 .service__icon svg, .domain__icon svg, .contact__icon svg { width: 26px; height: 26px; fill: none; stroke: var(--violet); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: stroke .3s; }
-.service:hover .service__icon { background: var(--violet); }
-.service:hover .service__icon svg { stroke: #fff; }
+.service__icon svg { stroke: var(--on); }
+.service:hover .service__icon { transform: translateY(-3px); }
 .service h3 { font-size: 1.3rem; margin-bottom: 12px; }
 .service p { font-size: .97rem; }
 .checklist { margin-top: 16px; display: grid; gap: 9px; }
