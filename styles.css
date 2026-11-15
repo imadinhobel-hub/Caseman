@@ -68,14 +68,8 @@ strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- Logo ---------- */
 .logo { display: inline-flex; flex-direction: column; width: max-content; }
-.logo__img { height: 44px; width: auto; }
-.logo__tag {
-  display: block; margin-top: 3px; padding: 0 2px 0 4px; font-family: var(--head); font-weight: 700; font-size: .56rem;
-  letter-spacing: .2em; text-transform: uppercase; color: var(--violet); white-space: nowrap;
-  text-align: justify; text-align-last: justify;
-}
-.footer .logo__img { height: 56px; }
-.footer .logo__tag { font-size: .7rem; color: #D8C9DC; }
+.logo__img { height: 58px; width: auto; }
+.footer .logo__img { height: 72px; }
 
 /* ---------- En-tête ---------- */
 .header { position: fixed; inset: 0 0 auto; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
@@ -530,6 +524,5 @@ strong { color: var(--ink); font-weight: 600; }
   .val__body p { padding: 0 0 22px 62px; }
   .cta__inner { padding: 40px 22px; }
   .footer__grid { grid-template-columns: 1fr; }
-  .logo__img { height: 36px; }
-  .logo__tag { font-size: .46rem; letter-spacing: .16em; }
+  .logo__img { height: 48px; }
 }
