@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664 1082" width="664" height="1082">
+<defs><filter id="b" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter><pattern id="wm" width="330" height="190" patternUnits="userSpaceOnUse" patternTransform="rotate(-28)"><text x="10" y="110" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="34" letter-spacing="6" fill="#62206E" fill-opacity=".05">CONFIDENTIEL</text></pattern></defs>
+<rect width="664" height="1082" fill="#fff"/>
+<rect x="0" y="0" width="664" height="58" fill="#F7C531"/>
+<rect x="0" y="58" width="664" height="60" fill="#EFECF0"/>
+<text x="18" y="36" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#261C2C" letter-spacing=".5">CORRIGÉ · DIFFUSION RESTREINTE</text>
+<text x="552.0" y="27" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#261C2C" text-anchor="middle">A COMPLÉTER PAR</text>
+<text x="552.0" y="44" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#261C2C" text-anchor="middle">LE CORRECTEUR</text>
+<text x="220.0" y="93" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#261C2C" text-anchor="middle">Attendus des réponses (corrigé)</text>
+<text x="552.0" y="93" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#261C2C" text-anchor="middle">Atteinte du critère</text>
+<g filter="url(#b)" fill="#8E8693">
+<rect x="20" y="152" width="319" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="176" width="306" height="9" rx="3" />
+<rect x="20" y="200" width="368" height="9" rx="3" />
+<rect x="20" y="224" width="269" height="9" rx="3" />
+<rect x="20" y="266" width="327" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="290" width="355" height="9" rx="3" />
+<rect x="20" y="314" width="330" height="9" rx="3" />
+<rect x="20" y="338" width="354" height="9" rx="3" />
+<rect x="20" y="362" width="264" height="9" rx="3" />
+<rect x="20" y="454" width="380" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="478" width="307" height="9" rx="3" />
+<rect x="20" y="502" width="221" height="9" rx="3" />
+<rect x="20" y="544" width="305" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="568" width="317" height="9" rx="3" />
+<rect x="20" y="592" width="156" height="9" rx="3" />
+<rect x="20" y="634" width="339" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="658" width="387" height="9" rx="3" />
+<rect x="20" y="682" width="374" height="9" rx="3" />
+<rect x="20" y="758" width="347" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="782" width="391" height="9" rx="3" />
+<rect x="20" y="806" width="135" height="9" rx="3" />
+<rect x="20" y="848" width="387" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="872" width="399" height="9" rx="3" />
+<rect x="20" y="896" width="374" height="9" rx="3" />
+<rect x="20" y="920" width="212" height="9" rx="3" />
+<rect x="20" y="962" width="389" height="11" rx="3" fill="#4E4552"/>
+<rect x="20" y="986" width="310" height="9" rx="3" />
+<rect x="20" y="1010" width="254" height="9" rx="3" />
+</g>
+<rect width="664" height="1082" fill="url(#wm)"/>
+<g fill="none" stroke="#3A3040" stroke-width="2">
+<rect x="1" y="1" width="662" height="1080"/>
+<path d="M440 0V1082M0 58H664M0 118H664M0 420H664M0 724H664"/>
+</g>
+<text x="552.0" y="277.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#261C2C" text-anchor="middle">Acquis</text>
+<text x="552.0" y="580.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#261C2C" text-anchor="middle">Acquis</text>
+<text x="552.0" y="911.0" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#261C2C" text-anchor="middle">En cours</text>
+</svg>
